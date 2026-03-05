@@ -129,4 +129,4 @@ Those will build on top of this stable kiosk foundation.
 
 The Raspberry Pi is stable and operating as a hardened signage edge device suitable for further development and integration.
 
-This concludes the initial setup and testing phase.
+This concludes the initial setup and testing phase. Display of Image, Video, and Audio are yet to be tested.
