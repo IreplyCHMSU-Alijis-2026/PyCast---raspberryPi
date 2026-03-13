@@ -3,9 +3,6 @@
 # Wait for X11 desktop to load
 sleep 5
 
-# Source your config
-source /home/$(whoami)/signage/config/config.env
-
 # Disable screen blanking & power saving
 xset s off
 xset -dpms
@@ -19,6 +16,10 @@ unclutter -idle 0 &
 
 # Launch Chromium in kiosk
 while true; do
+# Source your config
+source /home/$(whoami)/signage/config/config.env 
+# i need to put it here so that if the config file is updated, it will be reflected without restarting the script
+
   chromium \
     --kiosk \
     --start-maximized \
