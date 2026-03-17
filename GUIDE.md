@@ -1,4 +1,3 @@
-````md
 # Git Workflow Guide
 
 ## First Time Setup
