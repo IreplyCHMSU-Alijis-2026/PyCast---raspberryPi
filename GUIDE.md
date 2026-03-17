@@ -195,3 +195,7 @@ All scripts are organized into the following directories. Each teammate should w
 
 ## Goal:
 - Keep the kiosk running continuously with minimal manual intervention.
+
+# Save Your bash scripts under scripts folder 
+- You can make PR's to all scripts execpt the start-kiosk.
+- PR's for start-kiosk will not be accepted.
