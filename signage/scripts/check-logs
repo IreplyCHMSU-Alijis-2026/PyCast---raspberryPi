@@ -3,7 +3,7 @@
 BASE_LOG_DIR="/home/vers/signage/logs"
 LOG_FOLDERS=("pi-check_logs" "watchdog_logs" "maintenance")
 
-# Ask user if they want today or custom date
+# ask user if they want today or custom date
 read -rp "View logs for today? (Y/n): " use_today
 use_today=${use_today:-Y}
 
@@ -21,7 +21,7 @@ echo ""
 echo "Fetching logs for date: $DATE_STR"
 echo "===================================================="
 
-# Iterate through log folders
+# iterate through log folders
 for folder in "${LOG_FOLDERS[@]}"; do
     LOG_DIR="$BASE_LOG_DIR/$folder"
     if [[ ! -d "$LOG_DIR" ]]; then
@@ -35,13 +35,13 @@ for folder in "${LOG_FOLDERS[@]}"; do
         continue
     fi
 
-    # Display logs
+    # display logs
     for logfile in "${log_files[@]}"; do
         echo ""
         echo "FOLDER: $folder | FILE: $(basename "$logfile")"
         echo "--------------------------------------------------"
 
-        # Highlight common issues
+        # highlight common issues
         grep --color=always -E "ERROR|FAIL|CRASH|$" "$logfile"
     done
 done
